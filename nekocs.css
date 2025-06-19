@@ -57,15 +57,17 @@ h6 {
 .scroll-icon {
     display: block;
     height: 3.5vh;
-    margin: 2vh auto 2vh; /* Top, right/left auto-center, bottom, [thank you gpt]*/
+    margin: 2vh auto 2vh; /* top right/left auto-center bottom*/
     pointer-events: none;
 }
 
+/*these are the blur filters. we add blur steps 7 times and mask them to create this effect.
+check out https://kennethnym.com/blog/progressive-blur-in-css/ for in depth info*/
 .container {
   position: relative;
   width: 100%;
   max-width: 100vw;
-  height: 200vh; /* for scrolling demo */
+  height: 200vh; /* for scrolling*/
   overflow: auto;
 }
 
@@ -87,7 +89,10 @@ h6 {
   right: 0;
 }
 
-/* Modified masks to fade from top to bottom */
+/* modified masks to fade from top to bottom. thanks, gpt
+
+rest of the code is from https://codepen.io/kennethnym/pen/eYqyRjQ and is modifed without the help of ai
+also these are the "steps" i was talking about, take note of ".blur-filter:nth-child([1-7]) {"*/
 .progressive-blur-container > .blur-filter:nth-child(1) {
   backdrop-filter: blur(1px);
   mask: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 40%);
