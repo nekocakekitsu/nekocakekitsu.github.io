@@ -1,0 +1,134 @@
+body {
+
+    background-color: #000000;
+
+}
+
+
+
+h1 {
+
+    color: white;
+
+}
+
+
+/* leftovers from prev website proto*/
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding: 4vh;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+
+h1 {
+    font-weight: normal;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+h4 {
+    font-weight: normal;
+}
+
+h5 {
+    font-weight: normal;
+}
+
+h6 {
+    font-weight: normal;
+}
+
+.scroll-icon {
+    display: block;
+    height: 3.5vh;
+    margin: 2vh auto 2vh; /* Top, right/left auto-center, bottom, [thank you gpt]*/
+    pointer-events: none;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  height: 200vh; /* for scrolling demo */
+  overflow: auto;
+}
+
+.progressive-blur-container {
+  position: fixed;
+  top: 0; /* moved from bottom to top */
+  left: 0;
+  width: 300vh;
+  height: 30vh;
+  pointer-events: none;
+  z-index: 999; /* make sure it stays on top */
+}
+
+.progressive-blur-container > .blur-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Modified masks to fade from top to bottom */
+.progressive-blur-container > .blur-filter:nth-child(1) {
+  backdrop-filter: blur(1px);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 40%);
+}
+
+.progressive-blur-container > .blur-filter:nth-child(2) {
+  backdrop-filter: blur(2px);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 50%);
+}
+
+.progressive-blur-container > .blur-filter:nth-child(3) {
+  backdrop-filter: blur(4px);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 60%);
+}
+
+.progressive-blur-container > .blur-filter:nth-child(4) {
+  backdrop-filter: blur(8px);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 70%);
+}
+
+.progressive-blur-container > .blur-filter:nth-child(5) {
+  backdrop-filter: blur(16px);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 90%);
+}
+
+.progressive-blur-container > .blur-filter:nth-child(6) {
+  backdrop-filter: blur(32px);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 80%);
+}
+
+.progressive-blur-container > .blur-filter:nth-child(7) {
+  z-index: 10;
+  backdrop-filter: blur(64px);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%);
+}
+
+.progressive-blur-container > .gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(#b7bef83b, transparent); /* flipped direction */
+}
