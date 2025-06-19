@@ -1,0 +1,62 @@
+body {
+
+    background-color: #000000;
+
+}
+
+
+
+h1 {
+
+    color: white;
+
+}
+
+
+/* leftovers from prev website proto*/
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding: 4vh;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+
+h1 {
+    font-weight: normal;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+h4 {
+    font-weight: normal;
+}
+
+h5 {
+    font-weight: normal;
+}
+
+h6 {
+    font-weight: normal;
+}
+
+.scroll-icon {
+    display: block;
+    height: 3.5vh;
+    margin: 2vh auto 2vh; /* Top, right/left auto-center, bottom, [thank you gpt]*/
+    pointer-events: none;
+}
