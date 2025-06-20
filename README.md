@@ -6,5 +6,7 @@ nekocake kitsu's website
 
 
 
-https://github.com/user-attachments/assets/df6f0bad-7a18-4724-8fdc-df623e66384f
+
+
+https://github.com/user-attachments/assets/0189df4e-0b26-4359-b9fe-e970bc08e2e2
 *this video is entirely unrelated to the contents of this github repo, obviously*
