@@ -62,14 +62,22 @@ h6 {
 
 /*these are the blur filters. we add blur steps 7 times and mask them to create this effect.
 check out https://kennethnym.com/blog/progressive-blur-in-css/ for in depth info*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* prevents horizontal scrollbar */
+}
+
 .container {
     position: relative;
     width: 100%;
-    
     max-width: 100vw;
-    height: 200vh; /* for scrolling*/
-    overflow: auto;
+    /* removed this ↓ */
+    /* height: 200vh; */
+    /* dont use overflow here unless absolutely needed */
 }
+
 
 .progressive-blur-container {
     position: fixed;
