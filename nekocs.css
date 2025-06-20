@@ -142,10 +142,10 @@ also these are the "steps" i was talking about, take note of ".blur-filter:nth-c
   position:fixed;
   overflow: scroll;
   z-index: 1000;
-   height: 40vh;
+   height: 35vh;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(#b7bef83b, transparent); /* flipped direction */
+    background: linear-gradient(#b7bef84c, transparent); /* flipped direction */
 }
