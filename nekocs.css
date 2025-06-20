@@ -5,7 +5,6 @@ body {
 }
 
 
-
 h1 {
 
     color: white;
@@ -57,36 +56,36 @@ h6 {
 .scroll-icon {
     display: block;
     height: 3.5vh;
-    margin: 2vh auto 2vh; /* top right/left auto-center bottom*/
+    margin: 2vh auto; /* top right/left auto-center bottom*/
     pointer-events: none;
 }
 
 /*these are the blur filters. we add blur steps 7 times and mask them to create this effect.
 check out https://kennethnym.com/blog/progressive-blur-in-css/ for in depth info*/
 .container {
-  position: relative;
-  width: 100%;
-  max-width: 100vw;
-  height: 200vh; /* for scrolling*/
-  overflow: auto;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    height: 200vh; /* for scrolling*/
+    overflow: auto;
 }
 
 .progressive-blur-container {
-  position: fixed;
-  top: 0; /* moved from bottom to top */
-  left: 0;
-  width: 300vh;
-  height: 30vh;
-  pointer-events: none;
-  z-index: 999; /* make sure it stays on top */
+    position: fixed;
+    top: 0; /* moved from bottom to top */
+    left: 0;
+    width: 300vh;
+    height: 30vh;
+    pointer-events: none;
+    z-index: 999; /* make sure it stays on top */
 }
 
 .progressive-blur-container > .blur-filter {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 /* modified masks to fade from top to bottom. thanks, gpt
@@ -94,46 +93,46 @@ check out https://kennethnym.com/blog/progressive-blur-in-css/ for in depth info
 rest of the code is from https://codepen.io/kennethnym/pen/eYqyRjQ and is modifed without the help of ai
 also these are the "steps" i was talking about, take note of ".blur-filter:nth-child([1-7]) {"*/
 .progressive-blur-container > .blur-filter:nth-child(1) {
-  backdrop-filter: blur(1px);
-  mask: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 40%);
+    backdrop-filter: blur(1px);
+    mask: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 40%);
 }
 
 .progressive-blur-container > .blur-filter:nth-child(2) {
-  backdrop-filter: blur(2px);
-  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 50%);
+    backdrop-filter: blur(2px);
+    mask: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 50%);
 }
 
 .progressive-blur-container > .blur-filter:nth-child(3) {
-  backdrop-filter: blur(4px);
-  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 60%);
+    backdrop-filter: blur(4px);
+    mask: linear-gradient(to top, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 60%);
 }
 
 .progressive-blur-container > .blur-filter:nth-child(4) {
-  backdrop-filter: blur(8px);
-  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 70%);
+    backdrop-filter: blur(8px);
+    mask: linear-gradient(to top, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 70%);
 }
 
 .progressive-blur-container > .blur-filter:nth-child(5) {
-  backdrop-filter: blur(16px);
-  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 90%);
+    backdrop-filter: blur(16px);
+    mask: linear-gradient(to top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 90%);
 }
 
 .progressive-blur-container > .blur-filter:nth-child(6) {
-  backdrop-filter: blur(32px);
-  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 80%);
+    backdrop-filter: blur(32px);
+    mask: linear-gradient(to top, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 80%);
 }
 
 .progressive-blur-container > .blur-filter:nth-child(7) {
-  z-index: 10;
-  backdrop-filter: blur(64px);
-  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%);
+    z-index: 10;
+    backdrop-filter: blur(64px);
+    mask: linear-gradient(to top, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%);
 }
 
 .progressive-blur-container > .gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(#b7bef83b, transparent); /* flipped direction */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(#b7bef83b, transparent); /* flipped direction */
 }
