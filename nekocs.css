@@ -132,7 +132,7 @@ also these are the "steps" i was talking about, take note of ".blur-filter:nth-c
 .gradient {
   position:fixed;
   overflow: scroll;
-  z-index: 998;
+  z-index: 1000;
    height: 40vh;
     top: 0;
     left: 0;
