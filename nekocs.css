@@ -128,8 +128,12 @@ also these are the "steps" i was talking about, take note of ".blur-filter:nth-c
     mask: linear-gradient(to top, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%);
 }
 
-.progressive-blur-container > .gradient {
-    position: absolute;
+
+.gradient {
+  position:fixed;
+  overflow: scroll;
+  z-index: 998;
+   height: 40vh;
     top: 0;
     left: 0;
     right: 0;
